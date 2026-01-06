@@ -26,7 +26,7 @@ sudo flatpak remote-add --if-not-exists fedora oci+https://registry.fedoraprojec
 sudo rm -f /etc/sddm.conf.d/60-playtron-session-override.conf
 
 # Switch to the upstream image in case local modifications were used.
-sudo bootc switch ghcr.io/playtron-os/playtron-os:latest
+sudo LANG="en_US.UTF-8" LC_ALL="en_US.UTF-8" bootc switch ghcr.io/playtron-os/playtron-os:latest
 
 # Use a single command to delete the sudoers file and reboot.
 # Otherwise, the reboot may not work.
